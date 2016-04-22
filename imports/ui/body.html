@@ -1,0 +1,27 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Database</h1>
+        
+      {{> addStudent}}
+    </header>
+      
+      
+    <ul>
+      {{#each students}}
+        <li>{{studentName}}: {{studentMajor}}  {{createdAt}}</li>
+      {{/each}}
+    </ul>
+    
+  </div>
+</body>
+ 
+
+
+<template name="addStudent">
+    <form class="new-student">
+        <input type="text" name="name" placeholder="Add student name" />
+        <input type="text" name="major" placeholder="Add student's major" />
+        <input type="submit" value="Add Student">
+      </form>
+</template>
